@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Search } from "./Search";
-import { SearchContext } from "../App";
 function Header()   {
-  const {searchValue, setSearchValue} = React.useContext(SearchContext);
+  
   return (
     
       <div className="header">
@@ -18,10 +17,7 @@ function Header()   {
           </div>
         </div>
         </Link>
-        <Search 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        />
+        <Search />
         <Link to="/cart">
         <div className="header__cart">     
           <a href="/cart.html" className="button button--cart">
